@@ -7,16 +7,13 @@ data processing workflows with minimal configuration and management.
 
 Mob has two-levels of work distribution: mobs and workers.
 
-A mob is an indivual node in a mob network and communicates with other nodes
-by exchanging messages. Any JVM process may be a mob.  
+Mobs have jobqueues from which pools of workers reserve jobs.  Jobs
+may be sent to a mob through mob.jobqueue/put as well as a network interface (not implemented).
 
 Workers are threads running inside a node
 that process job requests.
 
-Mob networks are formed dynamically by member nodes using a gossip protocol to
-exchange network membership information.
-
-Each mob has a (soon to be persistable) message queue that stores received
+Each mob has a message queue that stores received
 job messages and maintenance commands.
 
 Mob aims to handle failure gracefully and allow quick and easy recovery.
@@ -26,7 +23,7 @@ MapReduce.
 
 ## Usage
 
-Nothing to use yet... 
+Nothing worth using yet... 
 
 ## Installation
 
