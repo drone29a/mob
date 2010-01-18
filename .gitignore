@@ -1,0 +1,8 @@
+pom-generated.xml
+Manifest.txt
+mob.jar
+*.log
+*.log.*
+*~
+lib
+resources
