@@ -13,8 +13,8 @@ Mobs are implemented as a thread pool and individual threads process individual 
 Each mob has a message queue that stores received job messages and maintenance commands.
 
 
-Mob's design was inspired by [Beanstalk](http://kr.github.com/beanstalkd/) and <strike>Google's
-MapReduce</strike> functional programming's HOFs: map and reduce.
+Mob's design was inspired by [Beanstalk](http://kr.github.com/beanstalkd/) and <del>Google's
+MapReduce</del> functional programming's HOFs: map and reduce.
 
 ## Usage
 
