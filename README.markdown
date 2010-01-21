@@ -5,21 +5,16 @@ A distributed workflow processing framework written in Clojure.
 The goal of mob is to provide distributed computing support to
 data processing workflows with minimal configuration and management.  
 
-Mob has two-levels of work distribution: mobs and workers.
+Mob has two-levels of work distribution: nodes and mobs.
 
-Mobs have jobqueues from which pools of workers reserve jobs.  Jobs
-may be sent to a mob through mob.jobqueue/put as well as a network interface (not implemented).
+Nodes have jobqueues from which mobs reserve jobs.  Jobs
+may be sent to a node through mob.jobqueue/put as well as a network interface (not implemented).
+Mobs are implemented as a thread pool and individual threads process individual job requests.
+Each mob has a message queue that stores received job messages and maintenance commands.
 
-Workers are threads running inside a node
-that process job requests.
 
-Each mob has a message queue that stores received
-job messages and maintenance commands.
-
-Mob aims to handle failure gracefully and allow quick and easy recovery.
-
-Mob's design was inspired by [Beanstalk](http://kr.github.com/beanstalkd/) and Google's
-MapReduce.
+Mob's design was inspired by [Beanstalk](http://kr.github.com/beanstalkd/) and <strike>Google's
+MapReduce</strike> functional programming's HOFs: map and reduce.
 
 ## Usage
 
