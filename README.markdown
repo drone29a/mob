@@ -1,8 +1,8 @@
-# mob
+# Mob
 
 A distributed workflow processing framework written in Clojure.
 
-The goal of mob is to provide distributed computing support to
+The goal of Mob is to provide distributed computing support to
 data processing workflows with minimal configuration and management.  
 
 Mob has two-levels of work distribution: nodes and mobs.
